@@ -71,7 +71,7 @@ namespace qemu_img_gui
                     dynamic += "-o subformat=dynamic";
 
                 var command = String.Format("convert {0} -O {1} {2} {3}", 
-                    txtSourceFile.Text.Trim(), comboBox1.Text, dynamic, txtOutput.Text.Trim());
+                    "\"" + txtSourceFile.Text.Trim()+ "\"", comboBox1.Text, dynamic, "\""+txtOutput.Text.Trim()+ "\"");
 
                 var process = new System.Diagnostics.Process();
                 process.StartInfo.FileName = qemuimgpath;
