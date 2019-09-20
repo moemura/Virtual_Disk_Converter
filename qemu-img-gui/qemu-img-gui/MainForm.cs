@@ -31,6 +31,8 @@ namespace qemu_img_gui
         {
             var dialog = new SaveFileDialog();
             dialog.FileName = BuildOutputName();
+            var filter = comboBox1.Text.Replace("vpc", "vhd");
+            dialog.Filter = "Virtual Disk | *." + filter;
             dialog.ShowDialog();
             txtOutput.Text = dialog.FileName;
             txtOutput.Text = BuildOutputName();
@@ -76,6 +78,8 @@ namespace qemu_img_gui
                 var process = new System.Diagnostics.Process();
                 process.StartInfo.FileName = qemuimgpath;
                 process.StartInfo.Arguments = command;
+                process.EnableRaisingEvents = true;
+                process.Exited += new EventHandler(myProcess_HasExited);
                 process.Start();
             }
             else
@@ -101,6 +105,11 @@ namespace qemu_img_gui
             tmp = Path.ChangeExtension(tmpOutput.Trim(), comboBox1.Text);
             tmp = tmp.Replace("vpc", "vhd");
             return tmp;
+        }
+
+        private static void myProcess_HasExited(object sender, System.EventArgs e)
+        {
+            MessageBox.Show("Done.");
         }
     }
 }
