@@ -45,8 +45,8 @@
             this.label5 = new System.Windows.Forms.Label();
             this.btnStartPhysical = new System.Windows.Forms.Button();
             this.txtOutputPhysical = new System.Windows.Forms.TextBox();
-            this.btnBrowseOutputPhysical = new System.Windows.Forms.Button();
             this.btnRefresh = new System.Windows.Forms.Button();
+            this.btnBrowseOutputPhysical = new System.Windows.Forms.Button();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.SuspendLayout();
@@ -180,7 +180,7 @@
             this.groupBox2.Size = new System.Drawing.Size(532, 121);
             this.groupBox2.TabIndex = 7;
             this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "From Physical";
+            this.groupBox2.Text = "From Physical (Need Administrator Access)";
             // 
             // cmbSourcePhysical
             // 
@@ -225,16 +225,6 @@
             this.txtOutputPhysical.Size = new System.Drawing.Size(346, 20);
             this.txtOutputPhysical.TabIndex = 4;
             // 
-            // btnBrowseOutputPhysical
-            // 
-            this.btnBrowseOutputPhysical.Location = new System.Drawing.Point(457, 46);
-            this.btnBrowseOutputPhysical.Name = "btnBrowseOutputPhysical";
-            this.btnBrowseOutputPhysical.Size = new System.Drawing.Size(75, 23);
-            this.btnBrowseOutputPhysical.TabIndex = 5;
-            this.btnBrowseOutputPhysical.Text = "Browse";
-            this.btnBrowseOutputPhysical.UseVisualStyleBackColor = true;
-            this.btnBrowseOutputPhysical.Click += new System.EventHandler(this.btnBrowseOutput_Click);
-            // 
             // btnRefresh
             // 
             this.btnRefresh.Location = new System.Drawing.Point(457, 20);
@@ -244,6 +234,16 @@
             this.btnRefresh.Text = "Refresh";
             this.btnRefresh.UseVisualStyleBackColor = true;
             this.btnRefresh.Click += new System.EventHandler(this.btnRefresh_Click);
+            // 
+            // btnBrowseOutputPhysical
+            // 
+            this.btnBrowseOutputPhysical.Location = new System.Drawing.Point(457, 46);
+            this.btnBrowseOutputPhysical.Name = "btnBrowseOutputPhysical";
+            this.btnBrowseOutputPhysical.Size = new System.Drawing.Size(75, 23);
+            this.btnBrowseOutputPhysical.TabIndex = 5;
+            this.btnBrowseOutputPhysical.Text = "Browse";
+            this.btnBrowseOutputPhysical.UseVisualStyleBackColor = true;
+            this.btnBrowseOutputPhysical.Click += new System.EventHandler(this.btnBrowseOutput_Click);
             // 
             // MainForm
             // 
